@@ -10,6 +10,7 @@ import ReadySection from "./components/Home/Ready";
 import WhatsappBtn from "./components/Home/WhatsappBtn";
 import Footer from "./components/Footer";
 import { useAuth } from "@/context/AuthContext"; // Import Auth to handle state smoothly
+import SaleBanner from "./components/SaleBanner";
 
 export default function Home() {
   const { loading } = useAuth();
@@ -58,6 +59,7 @@ export default function Home() {
       <WhatsappBtn />
 
       <Footer />
+      <SaleBanner />
     </main>
   );
 }
