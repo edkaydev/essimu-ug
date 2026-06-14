@@ -9,6 +9,7 @@ import {
     MonitorOff, Laptop
 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
+import SaleBanner from "../components/SaleBanner";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
@@ -156,6 +157,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                     </div>
                 </main>
             </div>
+            <SaleBanner />
         </div>
     );
 }
