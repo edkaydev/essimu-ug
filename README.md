@@ -26,7 +26,7 @@ Uganda's e-commerce landscape is mobile-first, and buyers already live in WhatsA
 - **No-account shopping** — browse and order instantly
 - **Shop by category** — smartphones, accessories, TVs, laptops
 - **Repairs** — phone and gadget repair services
-- **Direct WhatsApp ordering** — one tap from product to seller chat
+- **Local basket, no online checkout** — the cart is stored in the browser (`essimu_cart_v1`) and the "Place Order via WhatsApp" button opens a prefilled order message; no card payment or server-side checkout
 - **Admin panel** — product management, form-based CRUD, stat cards
 - **Home page** — hero, categories, best sellers, brand marquee, testimonials
 - **Auth** — optional admin login for store management
@@ -37,8 +37,7 @@ Uganda's e-commerce landscape is mobile-first, and buyers already live in WhatsA
 # 1. Install dependencies
 npm install
 
-# 2. Configure environment variables
-cp .env.example .env.local
+# 2. Create .env.local with the variables listed below
 
 # 3. Run the dev server
 npm run dev
@@ -48,8 +47,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser.
 
 ### Environment Variables
 
-- `NEXT_PUBLIC_FIREBASE_*` — Firebase client config
-- `NEXT_PUBLIC_CLOUDINARY_*` — Cloudinary media config
+- `NEXT_PUBLIC_FIREBASE_API_KEY`, `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`, `NEXT_PUBLIC_FIREBASE_PROJECT_ID`, `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`, `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`, `NEXT_PUBLIC_FIREBASE_APP_ID` — Firebase client config (`src/lib/firebase.ts`)
+- `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` — Cloudinary upload cloud name (`src/app/admin/components/ProductForm.tsx`)
 
 ## Project Structure
 
@@ -81,4 +80,4 @@ npm run lint     # Lint with ESLint
 
 ## License
 
-Public — see repository for license details.
+All rights reserved. No license is granted; contact the repository owner for permission.
